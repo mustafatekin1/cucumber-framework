@@ -1,0 +1,20 @@
+In Feature File:
+Write your test cases in Gherkin language
+
+In stepdefinitions package:
+create GoogleSearchStepDefinitions : This has the Java code
+
+In runners package:(DO THIS ONLY ONCE)
+Create Runner class(Runner is created only once)
+@RunWith(Cucumber.class)
+@CucumberOptions(
+features= “features folder path”
+glue=“stepdefinitions folder path”
+tags= “@tagname” )
+
+Run the Runner class
+Generate  step definitions
+Write your java code
+
+Note: The statement after annotations (eg: @Then) in the feature file
+must exactly match with the codes in the StepDefinitons

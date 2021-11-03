@@ -1,0 +1,27 @@
+
+Task:
+US100450(user story number): user should login using manager credentials
+Description:
+As manager, user should be able to login the application
+Acceptance Criteria:
+Given user is on the application page
+And user enters manager credentials
+When user clicks on the login button
+Then verify the default page is displayed
+
+Test Data:
+Url: https://qa-environment.resortsline.com/Account/Logon
+Credentials :
+manager,Manager1!
+manager2,Manager2!
+manager3,Manager3!
+
+Steps to execute the task:
+1. Create feature file
+2. Create test Scenarios (Test Cases, Test Scripts)
+Scenario:
+Scenario Outline:
+3. Run the runner class to generate the missing step definitions
+4. Write JAVA code in the step definitions using page object model
+NOTE: Make sure use reusable feature steps.
+Create new step definition when needed.

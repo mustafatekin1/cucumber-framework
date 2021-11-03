@@ -1,0 +1,10 @@
+To pass multiple different data
+To make the steps reusable
+To make the code shorter and cleaner
+Scenario Outline is especially useful
+- for running with multiple data for the same scenarios.
+- We have to use Scenario Outline and Examples keywords.
+Ex:
+Search item where item = Tesla, Honda, Nissan,…
+Create reservation with different user info
+where user info ={name=Jim,id=1}, {name=John,id=10},{name=Sam,id=80},…
