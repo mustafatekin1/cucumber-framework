@@ -1,10 +1,11 @@
 @room_reservation
 Feature: FE1009 Room Reservation
-
+@wip
   Scenario: TC01_user_login_with_manager_profile
     Given user is on the application page
     And user enters manager_id and manager_password
-      |manager|Manager1!|
+      |username |userpassword |
+      |manager  |Manager1!    |
     When user clicks on the login button
     Then verify the "manager" is displayed
     Then take the screenshot

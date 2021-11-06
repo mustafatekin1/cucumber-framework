@@ -7,38 +7,28 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
+import java.io.IOException;
+
 public class Hooks {
-    /*
-    Hooks has @Before and @After annotations
-    We create a Hooks under StepDefinitions folder (package)
-    Hooks is like TestBase class we had in previous frameworks.
-    We do not need to extend. It automatically extends
-    @Before @After runs before and after scenarios
-In cucumber
-@After
-- we put close the app/url
-- we put reports
-- we put screenshots
-     =>>(TakesScreenshot) method comes from Selenium
-     which means that we can take screenshots
-     "in JUnit and TestNG also"
-     */
-
-@Before
+    //    What is hooks class in cucumber?
+//    hooks has Before and After annotations.
+//    hooks will run Before and After each Scenario
+//    What is in your After in the hooks?
+//    -In cucumber hooks I use reports and I take screenshot
+//    -I designed my hooks. It takes screenshot when a test scenario fails.
+    @Before
     public void setUp(){
-    System.out.println("This is Hooks Before method");
-}
-
-@After
-    public void tearDown(Scenario scenario) {
-    // System.out.println("This is Hooks After method");
-    //getting the screenshot
-    final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-
-//       Attaching the screenshot to the scenarios in the default-cucumber-reports.html
-    if (scenario.isFailed()) {
-        scenario.attach(screenshot, "image/png", "Screenshot");
+//        System.out.println("This is hooks before method");
     }
-    //Driver.closeDriver();
+    @After
+    public void tearDown(Scenario scenario) throws IOException {
+////        System.out.println("This is hooks after method");
+////        Getting the screenshot: getScreenshotAs method takes the screenshot
+//        final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+////       Attaching the screenshot to the scenarios in the default-cucumber-reports.html
+//
+//        if (scenario.isFailed()) {
+//            scenario.attach(screenshot, "image/png", "Screenshot");
+//        }
     }
 }

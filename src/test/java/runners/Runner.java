@@ -8,35 +8,31 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
+                "pretty",//pretty is used for better readable reports or outputs
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"
-                 },
-        features = "src/test/resources/features", // path of the "features"
-        glue = "stepdefinitions",
-        // (we can use path of "stepdefinitions" but that did not work for me
-        //they are at the same level with features package
-        tags = "@room_reservation", // we tag the feature files which will be run
- // * we can use multiple tags with "or", "and"
- // * we can use multiple tags before scenarios: @smoke @login @logout
- //tags = "@smoke and @login" => runs the scenarios which have both
- //tags = "@smoke or @login" => runs the scenarios which have any of them
-        dryRun = false // is used to check if there are any missing Java codes
-                 // false means: run test on the browser and check if any Java codes are missing.
-                 // true means : run test without browser (like chrome-headless) and check if any Java codes are missing.
-                )
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt"
+                //"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        },      // The code gives error due to the plugin in above line.
+        features = "/src/test/resources/features",//MUST
+        glue = "stepdefinitions",//MUST
+        tags = "@google_search",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
+        dryRun = false//OPTIONAL.
+        // WITHOUT dryRun(dryRun=false is default,
+        // we can not check completion error without seeing the browser
+)
 public class Runner {
-
-    /*
-    - Runner is used to run feature files
-    - We do it with @RunWith(Cucumber.class)
-
-    *** @CucumberOptions
-    - We add the paths of features, stepdefinitions
-    - And we can add tags, dryRun and report plug-ins (will be explained later)
-     */
-
-
-
-
 }
+/*
+ * -Runner is used to run feature files
+ * -@RunWith is used to run the class. Without this, Runner class will not be runnable
+ * -@CucumberOptions is used to add feature path, step definition path,tags, dryRun, report plug ins
+ * -features   :  path of the features folder. this can point path of specific feature file
+ * -glue       :  path of step definitions folder. this can pint path of specific step definition class
+ * -tags       :  this marks which feature file to run. we add this tag in the feature files
+ * -dryRun     : -dryRun is used to check if there is any MISSING JAVA CODE(STEP DEFINITIONS)
+ *               -dryRun takes 2 values, true or false
+ *               -dryRun = false :Runs tests on the browser while checking if there is any JAVA code missing
+ *               -dryRun = true  :Runs tests without browser while checking if there is any JAVA code missing
+ * */

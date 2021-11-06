@@ -1,0 +1,11 @@
+Cucumber Parallel Testing
+1. Add plugins to the POM file
+    a. Add Cucumber Failsafe plugin
+    b. Add Cucumber Surefire plugin
+-----
+    c. Add Cucumber reporting plugin for better visual reports
+2. Create "TestRunner" class under runners package
+3. Open the terminal (ot intellij terminal):
+    - the code is : mvn clean verify
+    - or the code is: mcn clean install
+4. Create additional TestRunner classes
