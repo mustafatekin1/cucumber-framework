@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         },      // The code gives error due to the plugin in above line.
         features = "./src/test/resources/features",//MUST
         glue = "stepdefinitions",//MUST
-        tags = "@create_new_hotel_in_db_and_verify",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
+        tags = "@selenium_grid",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
         dryRun = false//OPTIONAL.
         // WITHOUT dryRun(dryRun=false is default,
         // we can not check completion error without seeing the browser

@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.665">
-    <testcase classname="Create new Hotel in Database and verify" name="TC01_create new hotel in DB" time="8.419">
-        <system-out>
-            <![CDATA[Given user connects to DB...................................................passed
-When user creates a new hotel with this values "'3000','Mustafa Royal King Hotel',+'LA Downtown','8889900','royalla@testemail.com','2021-10-10 19:40:47.597', 4".passed
-Then verify the creation is successful......................................passed
-Then close the connection...................................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.506">
+    <testcase classname="verify_application_title" name="verify_title_on_chrome" time="7.266">
+        <failure message="Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 93&#10;Current browser version is 95.0.4638.69 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'&#10;System info: host: 'MacBook-Pro.local', ip: 'fe80:0:0:0:404:35a1:3581:a65a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.2'&#10;Driver info: driver.version: unknown&#10;remote stacktrace: 0   chromedriver                        0x000000010882b6d9 chromedriver + 2758361&#10;1   chromedriver                        0x0000000108ede893 chromedriver + 9783443&#10;2   chromedriver                        0x00000001085b6ad8 chromedriver + 183000&#10;3   chromedriver                        0x00000001085dc7e5 chromedriver + 337893&#10;4   chromedriver                        0x00000001085d8403 chromedriver + 320515&#10;5   chromedriver                        0x00000001085d4b16 chromedriver + 305942&#10;6   chromedriver                        0x000000010860da82 chromedriver + 539266&#10;7   chromedriver                        0x0000000108607d43 chromedriver + 515395&#10;8   chromedriver                        0x00000001085dea0e chromedriver + 346638&#10;9   chromedriver                        0x00000001085dfc75 chromedriver + 351349&#10;10  chromedriver                        0x00000001087f21df chromedriver + 2523615&#10;11  chromedriver                        0x00000001088049f2 chromedriver + 2599410&#10;12  chromedriver                        0x00000001087d702b chromedriver + 2412587&#10;13  chromedriver                        0x0000000108805e1a chromedriver + 2604570&#10;14  chromedriver                        0x00000001087e796c chromedriver + 2480492&#10;15  chromedriver                        0x000000010881fd38 chromedriver + 2710840&#10;16  chromedriver                        0x000000010881fec1 chromedriver + 2711233&#10;17  chromedriver                        0x00000001088306f8 chromedriver + 2778872&#10;18  libsystem_pthread.dylib             0x00007fff2062d8fc _pthread_start + 224&#10;19  libsystem_pthread.dylib             0x00007fff20629443 thread_start + 15&#10;&#10;Build info: version: '4.0.0', revision: '3a21814679'&#10;System info: host: 'MacBook-Pro.local', ip: 'fe80:0:0:0:404:35a1:3581:a65a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]&#10;Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">
+            <![CDATA[Given user is on the application_login page with chrome.....................failed
+Then verify the title includes Resortsline..................................skipped
+
+StackTrace:
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 93
+Current browser version is 95.0.4638.69 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'MacBook-Pro.local', ip: 'fe80:0:0:0:404:35a1:3581:a65a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.2'
+Driver info: driver.version: unknown
+remote stacktrace: 0   chromedriver                        0x000000010882b6d9 chromedriver + 2758361
+1   chromedriver                        0x0000000108ede893 chromedriver + 9783443
+2   chromedriver                        0x00000001085b6ad8 chromedriver + 183000
+3   chromedriver                        0x00000001085dc7e5 chromedriver + 337893
+4   chromedriver                        0x00000001085d8403 chromedriver + 320515
+5   chromedriver                        0x00000001085d4b16 chromedriver + 305942
+6   chromedriver                        0x000000010860da82 chromedriver + 539266
+7   chromedriver                        0x0000000108607d43 chromedriver + 515395
+8   chromedriver                        0x00000001085dea0e chromedriver + 346638
+9   chromedriver                        0x00000001085dfc75 chromedriver + 351349
+10  chromedriver                        0x00000001087f21df chromedriver + 2523615
+11  chromedriver                        0x00000001088049f2 chromedriver + 2599410
+12  chromedriver                        0x00000001087d702b chromedriver + 2412587
+13  chromedriver                        0x0000000108805e1a chromedriver + 2604570
+14  chromedriver                        0x00000001087e796c chromedriver + 2480492
+15  chromedriver                        0x000000010881fd38 chromedriver + 2710840
+16  chromedriver                        0x000000010881fec1 chromedriver + 2711233
+17  chromedriver                        0x00000001088306f8 chromedriver + 2778872
+18  libsystem_pthread.dylib             0x00007fff2062d8fc _pthread_start + 224
+19  libsystem_pthread.dylib             0x00007fff20629443 thread_start + 15
+
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MacBook-Pro.local', ip: 'fe80:0:0:0:404:35a1:3581:a65a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '11.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+Capabilities {}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:39)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:146)
+	at stepdefinitions.selenium_grid_step_defs.Selenium_Grid_Step_Defs.user_is_on_the_application_login_page_with_chrome(Selenium_Grid_Step_Defs.java:35)
+	at ✽.user is on the application_login page with chrome(file:///Users/bilalcevik/cucumber-framework/./src/test/resources/features/selenium_grid_features/selenium_grid.feature:4)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
