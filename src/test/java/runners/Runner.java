@@ -15,9 +15,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
                 //"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },      // The code gives error due to the plugin in above line.
-        features = "/src/test/resources/features",//MUST
+        features = "./src/test/resources/features",//MUST
         glue = "stepdefinitions",//MUST
-        tags = "@google_search",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
+        tags = "@create_new_hotel_in_db_and_verify",//OPTIONAL. WITHOUT TAGS, RUNNER RUNS ALL FEATURES
         dryRun = false//OPTIONAL.
         // WITHOUT dryRun(dryRun=false is default,
         // we can not check completion error without seeing the browser

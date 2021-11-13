@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.665">
+    <testcase classname="Create new Hotel in Database and verify" name="TC01_create new hotel in DB" time="8.419">
+        <system-out>
+            <![CDATA[Given user connects to DB...................................................passed
+When user creates a new hotel with this values "'3000','Mustafa Royal King Hotel',+'LA Downtown','8889900','royalla@testemail.com','2021-10-10 19:40:47.597', 4".passed
+Then verify the creation is successful......................................passed
+Then close the connection...................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
